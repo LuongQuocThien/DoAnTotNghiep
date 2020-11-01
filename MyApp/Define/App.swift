@@ -19,3 +19,9 @@ struct Facebook {
     static var apiPublicKey: String { return "publicKey" }
     static var apiSecretKey: String { return "secretKey" }
 }
+
+struct Foursquare {
+
+    static let clienID = "OSFH11SDK3VUDVWQL0LP1X0PNLH424MBJLAFDUX3STMICKIY"
+    static let clienSecret = "DCRG4K0A2CGGRH2X0OPRKQOUYHWOH5WNWIM2KHDWXCZVTZHC"
+}
