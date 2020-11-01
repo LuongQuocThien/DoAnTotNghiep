@@ -178,6 +178,30 @@
 		64F3793D254E7468006B8F27 /* API.GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37931254E7467006B8F27 /* API.GeoLocation.swift */; };
 		64F3793E254E7468006B8F27 /* API.Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37932254E7467006B8F27 /* API.Profile.swift */; };
 		64F3793F254E7468006B8F27 /* API.Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37933254E7467006B8F27 /* API.Discovery.swift */; };
+		64F3795B254E74E7006B8F27 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37941254E74E7006B8F27 /* Manager.swift */; };
+		64F3795C254E74E7006B8F27 /* TrendingRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37943254E74E7006B8F27 /* TrendingRestaurant.swift */; };
+		64F3795D254E74E7006B8F27 /* FavoriteRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37944254E74E7006B8F27 /* FavoriteRestaurant.swift */; };
+		64F3795E254E74E7006B8F27 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37945254E74E7006B8F27 /* Comment.swift */; };
+		64F3795F254E74E7006B8F27 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 64F37946254E74E7006B8F27 /* .gitkeep */; };
+		64F37960254E74E7006B8F27 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37947254E74E7006B8F27 /* UserProfile.swift */; };
+		64F37961254E74E7006B8F27 /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37948254E74E7006B8F27 /* GeoLocation.swift */; };
+		64F37962254E74E7006B8F27 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37949254E74E7006B8F27 /* Photo.swift */; };
+		64F37963254E74E7006B8F27 /* NewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3794B254E74E7006B8F27 /* NewLocation.swift */; };
+		64F37964254E74E7006B8F27 /* NewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3794C254E74E7006B8F27 /* NewOrder.swift */; };
+		64F37965254E74E7006B8F27 /* NewGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3794D254E74E7006B8F27 /* NewGeo.swift */; };
+		64F37966254E74E7006B8F27 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3794E254E74E7006B8F27 /* NewUser.swift */; };
+		64F37967254E74E7006B8F27 /* NewOrdersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3794F254E74E7006B8F27 /* NewOrdersInfo.swift */; };
+		64F37968254E74E7006B8F27 /* SearchAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37950254E74E7006B8F27 /* SearchAnnotationView.swift */; };
+		64F37969254E74E7006B8F27 /*  RepresentativeComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37951254E74E7006B8F27 /*  RepresentativeComment.swift */; };
+		64F3796A254E74E7006B8F27 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37952254E74E7006B8F27 /* Category.swift */; };
+		64F3796B254E74E7006B8F27 /* SearchPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37953254E74E7006B8F27 /* SearchPointAnnotation.swift */; };
+		64F3796C254E74E7006B8F27 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37954254E74E7006B8F27 /* Menu.swift */; };
+		64F3796D254E74E7006B8F27 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37955254E74E7006B8F27 /* History.swift */; };
+		64F3796E254E74E7006B8F27 /* CategoryFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37956254E74E7006B8F27 /* CategoryFood.swift */; };
+		64F3796F254E74E7006B8F27 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37957254E74E7006B8F27 /* PointAnnotation.swift */; };
+		64F37970254E74E7006B8F27 /* DiscoveryRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37958254E74E7006B8F27 /* DiscoveryRestaurant.swift */; };
+		64F37971254E74E7006B8F27 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37959254E74E7006B8F27 /* Restaurant.swift */; };
+		64F37972254E74E7006B8F27 /* SearchRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3795A254E74E7006B8F27 /* SearchRestaurant.swift */; };
 		6C392FC5AF0C61509011C30D /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8000CCB9AE328B83764288 /* Pods_MyApp.framework */; };
 		EC0105521E8F8AE000CE013D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0105401E8F8ADF00CE013D /* Assets.xcassets */; };
 		EC0105541E8F8AE000CE013D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0105441E8F8ADF00CE013D /* AppDelegate.swift */; };
@@ -391,6 +415,30 @@
 		64F37931254E7467006B8F27 /* API.GeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.GeoLocation.swift; sourceTree = "<group>"; };
 		64F37932254E7467006B8F27 /* API.Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.Profile.swift; sourceTree = "<group>"; };
 		64F37933254E7467006B8F27 /* API.Discovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.Discovery.swift; sourceTree = "<group>"; };
+		64F37941254E74E7006B8F27 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		64F37943254E74E7006B8F27 /* TrendingRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingRestaurant.swift; sourceTree = "<group>"; };
+		64F37944254E74E7006B8F27 /* FavoriteRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRestaurant.swift; sourceTree = "<group>"; };
+		64F37945254E74E7006B8F27 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		64F37946254E74E7006B8F27 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		64F37947254E74E7006B8F27 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		64F37948254E74E7006B8F27 /* GeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
+		64F37949254E74E7006B8F27 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		64F3794B254E74E7006B8F27 /* NewLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLocation.swift; sourceTree = "<group>"; };
+		64F3794C254E74E7006B8F27 /* NewOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOrder.swift; sourceTree = "<group>"; };
+		64F3794D254E74E7006B8F27 /* NewGeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGeo.swift; sourceTree = "<group>"; };
+		64F3794E254E74E7006B8F27 /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		64F3794F254E74E7006B8F27 /* NewOrdersInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOrdersInfo.swift; sourceTree = "<group>"; };
+		64F37950254E74E7006B8F27 /* SearchAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAnnotationView.swift; sourceTree = "<group>"; };
+		64F37951254E74E7006B8F27 /*  RepresentativeComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " RepresentativeComment.swift"; sourceTree = "<group>"; };
+		64F37952254E74E7006B8F27 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		64F37953254E74E7006B8F27 /* SearchPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPointAnnotation.swift; sourceTree = "<group>"; };
+		64F37954254E74E7006B8F27 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		64F37955254E74E7006B8F27 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		64F37956254E74E7006B8F27 /* CategoryFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFood.swift; sourceTree = "<group>"; };
+		64F37957254E74E7006B8F27 /* PointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
+		64F37958254E74E7006B8F27 /* DiscoveryRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryRestaurant.swift; sourceTree = "<group>"; };
+		64F37959254E74E7006B8F27 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		64F3795A254E74E7006B8F27 /* SearchRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRestaurant.swift; sourceTree = "<group>"; };
 		7E8000CCB9AE328B83764288 /* Pods_MyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0105401E8F8ADF00CE013D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC0105421E8F8ADF00CE013D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1014,6 +1062,52 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		64F37940254E74E7006B8F27 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				64F37941254E74E7006B8F27 /* Manager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		64F37942254E74E7006B8F27 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				64F37943254E74E7006B8F27 /* TrendingRestaurant.swift */,
+				64F37944254E74E7006B8F27 /* FavoriteRestaurant.swift */,
+				64F37945254E74E7006B8F27 /* Comment.swift */,
+				64F37946254E74E7006B8F27 /* .gitkeep */,
+				64F37947254E74E7006B8F27 /* UserProfile.swift */,
+				64F37948254E74E7006B8F27 /* GeoLocation.swift */,
+				64F37949254E74E7006B8F27 /* Photo.swift */,
+				64F3794A254E74E7006B8F27 /* Firebase */,
+				64F37950254E74E7006B8F27 /* SearchAnnotationView.swift */,
+				64F37951254E74E7006B8F27 /*  RepresentativeComment.swift */,
+				64F37952254E74E7006B8F27 /* Category.swift */,
+				64F37953254E74E7006B8F27 /* SearchPointAnnotation.swift */,
+				64F37954254E74E7006B8F27 /* Menu.swift */,
+				64F37955254E74E7006B8F27 /* History.swift */,
+				64F37956254E74E7006B8F27 /* CategoryFood.swift */,
+				64F37957254E74E7006B8F27 /* PointAnnotation.swift */,
+				64F37958254E74E7006B8F27 /* DiscoveryRestaurant.swift */,
+				64F37959254E74E7006B8F27 /* Restaurant.swift */,
+				64F3795A254E74E7006B8F27 /* SearchRestaurant.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		64F3794A254E74E7006B8F27 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				64F3794B254E74E7006B8F27 /* NewLocation.swift */,
+				64F3794C254E74E7006B8F27 /* NewOrder.swift */,
+				64F3794D254E74E7006B8F27 /* NewGeo.swift */,
+				64F3794E254E74E7006B8F27 /* NewUser.swift */,
+				64F3794F254E74E7006B8F27 /* NewOrdersInfo.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		E7A23BB3FDC7E19F0663DF69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1165,17 +1259,11 @@
 			isa = PBXGroup;
 			children = (
 				64F37923254E7455006B8F27 /* Session.swift */,
+				64F37940254E74E7006B8F27 /* Manager */,
+				64F37942254E74E7006B8F27 /* Schema */,
 				64F37925254E7467006B8F27 /* API */,
-				ECF23AA31E9B8586008C23C1 /* Schema */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ECF23AA31E9B8586008C23C1 /* Schema */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Schema;
 			sourceTree = "<group>";
 		};
 		ECF23AC01E9B9253008C23C1 /* Library */ = {
@@ -1314,6 +1402,7 @@
 				64F3788C254E6872006B8F27 /* LoginViewController.xib in Resources */,
 				64F378B1254E6872006B8F27 /* FilterViewController.xib in Resources */,
 				64F378F6254E6873006B8F27 /* EditProfileViewController.xib in Resources */,
+				64F3795F254E74E7006B8F27 /* .gitkeep in Resources */,
 				64F37870254E6872006B8F27 /* CommentHeaderCollectionView.xib in Resources */,
 				64F378F1254E6873006B8F27 /* ProfileViewController.xib in Resources */,
 				64F37884254E6872006B8F27 /* NewRegisterViewController.xib in Resources */,
@@ -1461,6 +1550,7 @@
 				64F37888254E6872006B8F27 /* NewRegisterViewController.swift in Sources */,
 				64F378B4254E6872006B8F27 /* FavoriteCellViewModel.swift in Sources */,
 				64F378A2254E6872006B8F27 /* HomeViewModel.swift in Sources */,
+				64F3796E254E74E7006B8F27 /* CategoryFood.swift in Sources */,
 				64F378E3254E6873006B8F27 /* PhotoViewModel.swift in Sources */,
 				64F378A6254E6872006B8F27 /* NearlyRestaurantCellViewModel.swift in Sources */,
 				64F37917254E743F006B8F27 /* UIViewControllerExt.swift in Sources */,
@@ -1484,6 +1574,7 @@
 				64F37934254E7468006B8F27 /* RequestSerializer.swift in Sources */,
 				64F3789E254E6872006B8F27 /* InformationCellViewModel.swift in Sources */,
 				64F378D4254E6873006B8F27 /* SearchNearlyViewController.swift in Sources */,
+				64F3796A254E74E7006B8F27 /* Category.swift in Sources */,
 				64F378DA254E6873006B8F27 /* SearchResultViewModel.swift in Sources */,
 				64F37938254E7468006B8F27 /* Api.swift in Sources */,
 				64F378CD254E6872006B8F27 /* SearchViewModel.swift in Sources */,
@@ -1491,6 +1582,7 @@
 				64F378E2254E6873006B8F27 /* PhotoViewController.swift in Sources */,
 				64F37882254E6872006B8F27 /* LocationViewModel.swift in Sources */,
 				64F3789A254E6872006B8F27 /* MenuTableViewCell.swift in Sources */,
+				64F37965254E74E7006B8F27 /* NewGeo.swift in Sources */,
 				64F37896254E6872006B8F27 /* MenuTableCellViewModel.swift in Sources */,
 				64F378CF254E6873006B8F27 /* SearchCellViewModel.swift in Sources */,
 				64F37894254E6872006B8F27 /* AddressTableViewCell.swift in Sources */,
@@ -1501,6 +1593,8 @@
 				64F378F7254E6873006B8F27 /* EditProfileViewModel.swift in Sources */,
 				64F378DB254E6873006B8F27 /* ListAlbumViewModel.swift in Sources */,
 				64F378F3254E6873006B8F27 /* ProfileTableCell.swift in Sources */,
+				64F3796C254E74E7006B8F27 /* Menu.swift in Sources */,
+				64F37964254E74E7006B8F27 /* NewOrder.swift in Sources */,
 				64F378CB254E6872006B8F27 /* FoosterTableView.swift in Sources */,
 				64F378A4254E6872006B8F27 /* HomeViewController.swift in Sources */,
 				64F378EF254E6873006B8F27 /* PasswordViewController.swift in Sources */,
@@ -1519,12 +1613,14 @@
 				64F378DE254E6873006B8F27 /* AlbumPhotoCellViewModel.swift in Sources */,
 				EC0105541E8F8AE000CE013D /* AppDelegate.swift in Sources */,
 				64F3791B254E743F006B8F27 /* CLLocationCoordinate2DExt.swift in Sources */,
+				64F37961254E74E7006B8F27 /* GeoLocation.swift in Sources */,
 				64F37936254E7468006B8F27 /* ApiManager.swift in Sources */,
 				64F378C5254E6872006B8F27 /* HistorySearchCellViewModel.swift in Sources */,
 				64F37905254E6900006B8F27 /* ViewController.swift in Sources */,
 				64F37879254E6872006B8F27 /* NotificationViewController.swift in Sources */,
 				64F37919254E743F006B8F27 /* MapperExt.swift in Sources */,
 				64F378BF254E6872006B8F27 /* SearchViewController.swift in Sources */,
+				64F3795B254E74E7006B8F27 /* Manager.swift in Sources */,
 				64F37939254E7468006B8F27 /* Api.Detail.swift in Sources */,
 				64F378E6254E6873006B8F27 /* MenuFoodCellViewModel.swift in Sources */,
 				64F37924254E7455006B8F27 /* Session.swift in Sources */,
@@ -1534,47 +1630,63 @@
 				64F378D7254E6873006B8F27 /* SearchCorrectViewController.swift in Sources */,
 				64F378F9254E6873006B8F27 /* ProfileViewModel.swift in Sources */,
 				64F378B7254E6872006B8F27 /* FavoriteViewModel.swift in Sources */,
+				64F37966254E74E7006B8F27 /* NewUser.swift in Sources */,
 				64F37876254E6872006B8F27 /* NotificationBillTableViewCell.swift in Sources */,
 				64F378A0254E6872006B8F27 /* DetailViewModel.swift in Sources */,
+				64F3795D254E74E7006B8F27 /* FavoriteRestaurant.swift in Sources */,
 				64F3789D254E6872006B8F27 /* InfomationCell.swift in Sources */,
 				64F378EA254E6873006B8F27 /* ListFoodsViewController.swift in Sources */,
 				64F378C4254E6872006B8F27 /* HistorySearchTableCell.swift in Sources */,
 				64F3791C254E743F006B8F27 /* UIScrollViewExt.swift in Sources */,
 				64F378DC254E6873006B8F27 /* ListAlbumViewController.swift in Sources */,
 				64F378E4254E6873006B8F27 /* MenuViewModel.swift in Sources */,
+				64F37968254E74E7006B8F27 /* SearchAnnotationView.swift in Sources */,
 				64F378B9254E6872006B8F27 /* OrderFoodViewController.swift in Sources */,
 				ECEC0C581ED44C5D00F6760A /* String.swift in Sources */,
 				64F3791A254E743F006B8F27 /* CollectionExt.swift in Sources */,
 				64F3787A254E6872006B8F27 /* MapViewController.swift in Sources */,
+				64F37967254E74E7006B8F27 /* NewOrdersInfo.swift in Sources */,
+				64F37969254E74E7006B8F27 /*  RepresentativeComment.swift in Sources */,
 				EC5337BE1EF78FEA00ACE038 /* Font.swift in Sources */,
+				64F37963254E74E7006B8F27 /* NewLocation.swift in Sources */,
 				64F3791D254E743F006B8F27 /* DefaultsExt.swift in Sources */,
 				64F37875254E6872006B8F27 /* ImageUploadCollectionViewCell.swift in Sources */,
+				64F3796F254E74E7006B8F27 /* PointAnnotation.swift in Sources */,
 				64F3793D254E7468006B8F27 /* API.GeoLocation.swift in Sources */,
+				64F37960254E74E7006B8F27 /* UserProfile.swift in Sources */,
 				64F37922254E7448006B8F27 /* NoResultView.swift in Sources */,
+				64F37972254E74E7006B8F27 /* SearchRestaurant.swift in Sources */,
 				64F37885254E6872006B8F27 /* NewLoginViewController.swift in Sources */,
 				64F3793A254E7468006B8F27 /* API.Menu.swift in Sources */,
 				64F378B2254E6872006B8F27 /* FilterViewController.swift in Sources */,
 				64F378D2254E6873006B8F27 /* SearchResultViewController.swift in Sources */,
 				64F378C7254E6872006B8F27 /* HistorySearchViewModel.swift in Sources */,
+				64F37971254E74E7006B8F27 /* Restaurant.swift in Sources */,
+				64F3796D254E74E7006B8F27 /* History.swift in Sources */,
 				64F378E8254E6873006B8F27 /* MenuFoodTableViewCell.swift in Sources */,
 				64F37889254E6872006B8F27 /* WebViewController.swift in Sources */,
 				64F37915254E743F006B8F27 /* InputViewExt.swift in Sources */,
 				64F378BB254E6872006B8F27 /* OrderFoodTableViewCell.swift in Sources */,
 				64F37935254E7468006B8F27 /* Error.swift in Sources */,
 				64F378B3254E6872006B8F27 /* FavoriteViewController.swift in Sources */,
+				64F37962254E74E7006B8F27 /* Photo.swift in Sources */,
 				64F37890254E6872006B8F27 /* CommentTableViewCell.swift in Sources */,
 				64F378B6254E6872006B8F27 /* FavoriteTableViewCell.swift in Sources */,
 				64F37918254E743F006B8F27 /* URLExt.swift in Sources */,
 				64F37916254E743F006B8F27 /* StringExt.swift in Sources */,
 				64F37914254E743F006B8F27 /* MKMapViewExt.swift in Sources */,
 				64F378C9254E6872006B8F27 /* RecentlyViewModel.swift in Sources */,
+				64F3795E254E74E7006B8F27 /* Comment.swift in Sources */,
 				64F378C2254E6872006B8F27 /* HistorySearchViewController.swift in Sources */,
+				64F3795C254E74E7006B8F27 /* TrendingRestaurant.swift in Sources */,
 				64F378AB254E6872006B8F27 /* HomeHeaderViewModel.swift in Sources */,
 				64F37873254E6872006B8F27 /* CommentHeaderCollectionView.swift in Sources */,
 				EC5337B51EF7845700ACE038 /* Color.swift in Sources */,
 				64F378A5254E6872006B8F27 /* NearlyRestaurantCell.swift in Sources */,
 				64F37937254E7468006B8F27 /* ResponseSerializer.swift in Sources */,
 				64F378F8254E6873006B8F27 /* ProfileViewController.swift in Sources */,
+				64F3796B254E74E7006B8F27 /* SearchPointAnnotation.swift in Sources */,
+				64F37970254E74E7006B8F27 /* DiscoveryRestaurant.swift in Sources */,
 				64F3787C254E6872006B8F27 /* MapViewModel.swift in Sources */,
 				64F37881254E6872006B8F27 /* LocationCellViewModel.swift in Sources */,
 			);
