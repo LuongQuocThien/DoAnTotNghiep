@@ -9,18 +9,21 @@
 import UIKit
 import SwiftUtils
 
+typealias Action = (String?, (() -> Void)?)
+
 extension UIViewController {
-    func alert(error: Error) {
-        alert(title: "ERROR", msg: error.localizedDescription, buttons: ["OK"], handler: nil)
+
+    func alert(error: Error, handler: ((UIAlertAction) -> Void)? = nil) {
+        showAlert(title: "Error", message: error.localizedDescription, buttons: ["OK"], handler: handler)
     }
 
-    func alert(title: String? = nil, msg: String, buttons: [String], handler: ((UIAlertAction) -> Void)?) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    func showAlert(title: String, message: String, buttons: [String], handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for button in buttons {
-            let action = UIAlertAction(title: button, style: .cancel, handler: { action in
+            let alertAction = UIAlertAction(title: button, style: .default) { action in
                 handler?(action)
-            })
-            alert.addAction(action)
+            }
+            alert.addAction(alertAction)
         }
         present(alert, animated: true, completion: nil)
     }

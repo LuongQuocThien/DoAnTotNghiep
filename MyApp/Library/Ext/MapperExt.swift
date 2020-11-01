@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-extension Mapper {
-    func map(result: Result<Any>, type: DataType, completion: Completion) {
+extension Mapper where N: Mappable {
+    func map(result: Result<Any>, type: DataType, completion: Completion<Any>) {
         switch result {
         case .success(let json):
             switch type {
@@ -30,6 +30,13 @@ extension Mapper {
             }
         case .failure(let error):
             completion(.failure(error))
+        }
+    }
+
+    func mapArray(array: JSArray, completion: @escaping ([N]) -> Void) {
+        let objects = Mapper<N>().mapArray(JSONArray: array)
+        DispatchQueue.main.async {
+            completion(objects)
         }
     }
 }
