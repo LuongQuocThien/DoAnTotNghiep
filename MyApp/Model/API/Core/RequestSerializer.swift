@@ -15,7 +15,7 @@ extension ApiManager {
                  urlString: URLStringConvertible,
                  parameters: [String: Any]? = nil,
                  headers: [String: String]? = nil,
-                 completion: Completion?) -> Request? {
+                 completion: Completion<Any>?) -> Request? {
         guard Network.shared.isReachable else {
             completion?(.failure(Api.Error.network))
             return nil
@@ -28,14 +28,17 @@ extension ApiManager {
             encoding = URLEncoding.default
         }
 
-        var headers = api.defaultHTTPHeaders
-        headers.updateValues(headers)
+        var defaultHeader = api.defaultHTTPHeaders
+        defaultHeader.updateValues(headers)
+
+        var defaultParams = api.defaultParams
+        defaultParams.updateValues(parameters)
 
         let request = Alamofire.request(urlString.urlString,
                                         method: method,
-                                        parameters: parameters,
+                                        parameters: defaultParams,
                                         encoding: encoding,
-                                        headers: headers
+                                        headers: defaultHeader
         ).responseJSON(completion: { (response) in
             completion?(response.result)
         })
