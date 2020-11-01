@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CommentHeaderCollectionView" customModule="MyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="643" height="443"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaE-SL-ETM">
+                    <rect key="frame" x="0.0" y="0.0" width="643" height="317.5"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tiêu đề bình luận" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3V-lI-Q34">
+                            <rect key="frame" x="15" y="28" width="613" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="gsb-Lz-yr0"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nội dung bình luận (viết dưới 200 từ)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-6x-8w3">
+                            <rect key="frame" x="10" y="88.5" width="623" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="Bt5-LE-YKZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-da-vZp">
+                            <rect key="frame" x="20" y="78" width="603" height="0.5"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="Iv6-fl-a4T"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5U-Pf-7Cn">
+                            <rect key="frame" x="15" y="285.5" width="97" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Thêm ảnh" image="add_images">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="uploadImagesButtonTouchUpInside:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="w6J-cC-Kn5"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đánh giá" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKX-Wx-ebf">
+                            <rect key="frame" x="15" y="253.5" width="57" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PY-mj-2aX" customClass="CosmosView" customModule="Cosmos">
+                            <rect key="frame" x="458" y="248" width="160" height="28"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                    <real key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="L5U-Pf-7Cn" firstAttribute="leading" secondItem="oaE-SL-ETM" secondAttribute="leading" constant="15" id="4Lr-oj-CtQ"/>
+                        <constraint firstItem="F3V-lI-Q34" firstAttribute="leading" secondItem="oaE-SL-ETM" secondAttribute="leading" constant="15" id="8gC-iR-i7q"/>
+                        <constraint firstItem="EUq-da-vZp" firstAttribute="top" secondItem="F3V-lI-Q34" secondAttribute="bottom" constant="10" id="AWZ-pN-s6N"/>
+                        <constraint firstItem="F3V-lI-Q34" firstAttribute="top" secondItem="oaE-SL-ETM" secondAttribute="topMargin" constant="20" id="EK5-hn-ckx"/>
+                        <constraint firstItem="Nhw-6x-8w3" firstAttribute="leading" secondItem="oaE-SL-ETM" secondAttribute="leading" constant="10" id="FjH-o2-HRr"/>
+                        <constraint firstAttribute="trailing" secondItem="3PY-mj-2aX" secondAttribute="trailing" constant="25" id="I1u-cu-Pql"/>
+                        <constraint firstItem="EUq-da-vZp" firstAttribute="leading" secondItem="oaE-SL-ETM" secondAttribute="leading" constant="20" id="IWK-SN-ln2"/>
+                        <constraint firstItem="L5U-Pf-7Cn" firstAttribute="top" secondItem="dKX-Wx-ebf" secondAttribute="bottom" constant="15" id="O1e-CX-bSD"/>
+                        <constraint firstAttribute="trailing" secondItem="F3V-lI-Q34" secondAttribute="trailing" constant="15" id="dsr-Sy-pOI"/>
+                        <constraint firstItem="dKX-Wx-ebf" firstAttribute="top" secondItem="Nhw-6x-8w3" secondAttribute="bottom" constant="15" id="gsu-r1-sOi"/>
+                        <constraint firstItem="L5U-Pf-7Cn" firstAttribute="leading" secondItem="dKX-Wx-ebf" secondAttribute="leading" id="hGh-yI-Pia"/>
+                        <constraint firstItem="Nhw-6x-8w3" firstAttribute="top" secondItem="EUq-da-vZp" secondAttribute="bottom" constant="10" id="ieb-WN-EGt"/>
+                        <constraint firstAttribute="bottom" secondItem="L5U-Pf-7Cn" secondAttribute="bottom" id="igh-OU-dNM"/>
+                        <constraint firstItem="3PY-mj-2aX" firstAttribute="centerY" secondItem="dKX-Wx-ebf" secondAttribute="centerY" id="ocq-dd-ouQ"/>
+                        <constraint firstAttribute="trailing" secondItem="Nhw-6x-8w3" secondAttribute="trailing" constant="10" id="sq4-ch-o01"/>
+                        <constraint firstAttribute="trailing" secondItem="EUq-da-vZp" secondAttribute="trailing" constant="20" id="z0r-mm-WJA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oaE-SL-ETM" secondAttribute="trailing" id="2py-LK-ra9"/>
+                <constraint firstItem="oaE-SL-ETM" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="BAt-ed-b42"/>
+                <constraint firstItem="oaE-SL-ETM" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="wvV-4D-6vq"/>
+            </constraints>
+            <connections>
+                <outlet property="commentTextView" destination="Nhw-6x-8w3" id="Ed3-52-AJd"/>
+                <outlet property="ratingView" destination="3PY-mj-2aX" id="s8m-ky-KxW"/>
+                <outlet property="titleTextField" destination="F3V-lI-Q34" id="gwl-AR-psT"/>
+            </connections>
+            <point key="canvasLocation" x="296.80000000000001" y="321.58920539730138"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="add_images" width="32" height="32"/>
+    </resources>
+</document>
