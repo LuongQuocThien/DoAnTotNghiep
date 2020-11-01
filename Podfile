@@ -10,39 +10,38 @@ target 'MyApp' do
     project 'MyApp'
 
     # Architect
-    pod 'MVVM-Swift', '1.1.0' # MVVM Architect for iOS Application.
-
-    # UI
-    # pod 'SVProgressHUD', '2.2.5' # A clean and lightweight progress HUD for your iOS and tvOS app.
-    # pod 'IQKeyboardManagerSwift', '5.0.7' # Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.
-    # pod 'LGSideMenuController', '2.1.1' # iOS view controller, shows left and right views by pressing button or gesture.
+    pod 'MVVM-Swift', '1.1.0' # MVVM Architect for iOS Application.`
 
     # Data
-    pod 'ObjectMapper', '~> 3.4' # Simple JSON Object mapping written in Swift. Please fix this version to 2.2.6 now.
-    # pod 'SwiftyJSON', '4.0.0' # The better way to deal with JSON data in Swift.
+    pod 'ObjectMapper', '3.3.0' # Simple JSON Object mapping written in Swift.
 
     # Network
-    pod 'Alamofire', '4.6.0' # Elegant HTTP Networking in Swift.
-    pod 'AlamofireNetworkActivityIndicator', '2.2.0' # Controls the visibility of the network activity indicator on iOS using Alamofire.
+    pod 'Alamofire', '4.7.3' # Elegant HTTP Networking in Swift.
+    pod 'AlamofireNetworkActivityIndicator', '2.3.0' # Controls the visibility of the network activity indicator on iOS using Alamofire.
 
     # Utils
-    pod 'SwiftLint', '0.25.0' # A tool to enforce Swift style and conventions.
-    pod 'SwiftUtils', '4.0.1' # Swift shorthand.
-    pod 'SwiftDate', '4.5.0' # The best way to manage Dates and Timezones in Swift.
-
-    # pod 'AsyncSwift', '2.0.4' # Syntactic sugar in Swift for asynchronous dispatches in Grand Central Dispatch.
-    # pod 'SwiftyUserDefaults', '3.0.1' # Modern Swift API for NSUserDefaults.
-    # pod 'DeviceKit', '1.5.0' # DeviceKit is a value-type replacement of UIDevice.
-    # pod 'SAMKeychain', '1.5.3' # Simple Objective-C wrapper for the keychain that works on Mac and iOS.
-    # pod 'KeychainAccess', '3.1.0' # Simple Swift wrapper for Keychain that works on iOS, watchOS, tvOS and macOS.
+    pod 'SwiftLint', '0.30.1' # A tool to enforce Swift style and conventions.
+    pod 'SwiftUtils', '4.2.1'
+    pod 'SVProgressHUD'
+    pod 'SDWebImage'
+    pod 'NVActivityIndicatorView'
 
     # Crash reporting & beta deployment
-    pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Fabric'
+    pod 'RealmSwift'
 
-target 'MyAppTests' do
-    inherit! :complete
-end
+    # Test
+#    pod 'Nimble'
+#    pod 'Quick'
+#    pod 'OHHTTPStubs/Swift'
+
+    # Firebase
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'GeoFire', '~> 3.0'
+    pod 'Cosmos', '~> 20.0'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
@@ -50,7 +49,7 @@ post_install do |installer|
             if config.name == 'Release'
                 config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
             end
-            config.build_settings['SWIFT_VERSION'] = '4.0'
+            config.build_settings['SWIFT_VERSION'] = '4.2'
         end
         end
     end
