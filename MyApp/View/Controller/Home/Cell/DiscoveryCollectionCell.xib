@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DiscoveryCollectionCell" customModule="MyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84s-rq-1kf">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97D-5I-KCq">
+                        <rect key="frame" x="0.0" y="124.5" width="33.5" height="16.5"/>
+                        <color key="backgroundColor" red="1" green="0.14184307060000001" blue="0.17150222649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rR-0G-3VU">
+                        <rect key="frame" x="0.0" y="151" width="200" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cad-mV-4nD">
+                        <rect key="frame" x="0.0" y="169" width="200" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="84s-rq-1kf" secondAttribute="bottom" constant="50" id="5fR-0g-W22"/>
+                <constraint firstItem="6rR-0G-3VU" firstAttribute="top" secondItem="84s-rq-1kf" secondAttribute="bottom" constant="1" id="5lO-SM-ebu"/>
+                <constraint firstItem="84s-rq-1kf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Aag-OH-ekg"/>
+                <constraint firstItem="97D-5I-KCq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ep5-6O-seY"/>
+                <constraint firstItem="84s-rq-1kf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NTy-69-jBB"/>
+                <constraint firstItem="cad-mV-4nD" firstAttribute="top" secondItem="6rR-0G-3VU" secondAttribute="bottom" constant="1" id="P6M-c7-nLj"/>
+                <constraint firstAttribute="trailing" secondItem="84s-rq-1kf" secondAttribute="trailing" id="fjb-Jl-xQX"/>
+                <constraint firstAttribute="trailing" secondItem="cad-mV-4nD" secondAttribute="trailing" id="gLV-aL-YJA"/>
+                <constraint firstAttribute="trailing" secondItem="6rR-0G-3VU" secondAttribute="trailing" id="mrF-Dz-wob"/>
+                <constraint firstItem="6rR-0G-3VU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="psy-9U-yy2"/>
+                <constraint firstItem="cad-mV-4nD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vmd-Zv-avB"/>
+                <constraint firstItem="6rR-0G-3VU" firstAttribute="top" secondItem="97D-5I-KCq" secondAttribute="bottom" constant="10" id="wso-Mi-4sz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="193" height="190"/>
+            <connections>
+                <outlet property="commentLabel" destination="cad-mV-4nD" id="9I0-dC-bb2"/>
+                <outlet property="thumbnailImageView" destination="84s-rq-1kf" id="sPk-vV-bwC"/>
+                <outlet property="titleLabel" destination="6rR-0G-3VU" id="T9L-th-OZH"/>
+                <outlet property="typeRestaurantLabel" destination="97D-5I-KCq" id="lh5-cn-eA6"/>
+            </connections>
+            <point key="canvasLocation" x="246.40000000000001" y="217.69115442278863"/>
+        </collectionViewCell>
+    </objects>
+</document>
