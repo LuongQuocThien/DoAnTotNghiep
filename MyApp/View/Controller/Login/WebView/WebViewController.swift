@@ -73,7 +73,7 @@ extension WebViewController: WKNavigationDelegate {
                 do {
                     let request = try URLRequest(url: url.asURL())
                     webView.isHidden = true
-                    activityIndicatorView.startAnimating()
+                    HUD.show()
                     webView.load(request)
                 } catch {
                     alert(error: error)
@@ -86,7 +86,7 @@ extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.evaluateJavaScript("document.documentElement.outerHTML.toString()", completionHandler: { [weak self] (html, _) in
             guard let this = self, let token = this.viewModel.convertToken(html: html) else { return }
-            this.activityIndicatorView.stopAnimating()
+            HUD.dismiss()
             Session.shared.accessToken = token
             AppDelegate.shared.setRootViewController(root: .home)
         })

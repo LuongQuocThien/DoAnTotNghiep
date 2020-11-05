@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Photos
 
-final class EditProfileViewController: ViewController, UINavigationControllerDelegate {
+final class EditProfileViewController: ViewController {
 
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     @IBOutlet private weak var firstNameTextField: UITextField!
@@ -130,14 +131,12 @@ final class EditProfileViewController: ViewController, UINavigationControllerDel
 }
 
 // MARK: - Extension UIImagePickerControllerDelegate
-extension EditProfileViewController: UIImagePickerControllerDelegate {
+extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            print("Image not found!")
-            return
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            thumbnailImageView.image = selectedImage
         }
-        thumbnailImageView.image = selectedImage
     }
 }

@@ -9,8 +9,11 @@
 import UIKit
 import AlamofireNetworkActivityIndicator
 import Firebase
+import SVProgressHUD
 
 let networkIndicator = NetworkActivityIndicatorManager.shared
+
+typealias HUD = SVProgressHUD
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -63,11 +63,11 @@ final class SearchViewController: ViewController {
 
     private func setupContainerView() {
         containerView.addSubview(searchResult.view)
-        addChild(searchResult)
+        addChildViewController(searchResult)
         searchResult.view.frame = containerView.bounds
 
         containerView.addSubview(searchingVC.view)
-        addChild(searchingVC)
+        addChildViewController(searchingVC)
         searchingVC.view.frame = containerView.bounds
         searchingVC.delegate = self
     }
@@ -75,9 +75,9 @@ final class SearchViewController: ViewController {
     private func showView() {
         switch state {
         case .searching:
-            containerView.bringSubviewToFront(searchingVC.view)
+            containerView.bringSubview(toFront: searchingVC.view)
         case .searchResult:
-            containerView.bringSubviewToFront(searchResult.view)
+            containerView.bringSubview(toFront: searchResult.view)
         }
     }
 

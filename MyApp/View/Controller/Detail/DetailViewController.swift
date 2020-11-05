@@ -44,7 +44,7 @@ final class DetailViewController: ViewController {
     }
 
     func getDetailComment(isLoadMore: Bool) {
-        activityIndicator.startAnimating()
+        HUD.show()
         viewModel.getComment(isLoadMore: isLoadMore) { [weak self] (result) in
             guard let this = self else { return }
             switch result {
@@ -53,15 +53,15 @@ final class DetailViewController: ViewController {
             case .failure(let error):
                 this.alert(error: error)
             }
-            this.activityIndicator.stopAnimating()
+            HUD.dismiss()
         }
     }
 
     func getDetailPhotos() {
-        startAnimating()
+        HUD.show()
         viewModel.getPhotos { [weak self] (result) in
             guard let this = self else { return }
-            this.stopAnimating()
+            HUD.dismiss()
             switch result {
             case .success:
                 this.tableViewRestaurant.reloadData()
@@ -206,7 +206,7 @@ extension DetailViewController: UITableViewDelegate {
             }
             return Configure.heighForRowAtMenu
         default:
-            return UITableView.automaticDimension
+            return UITableViewAutomaticDimension
         }
     }
 

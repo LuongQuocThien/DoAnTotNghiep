@@ -81,6 +81,8 @@ PODS:
   - NVActivityIndicatorView (5.0.1):
     - NVActivityIndicatorView/Base (= 5.0.1)
   - NVActivityIndicatorView/Base (5.0.1)
+  - NVActivityIndicatorView/Extended (5.0.1):
+    - NVActivityIndicatorView/Base
   - ObjectMapper (3.3.0)
   - Realm (5.4.0):
     - Realm/Headers (= 5.4.0)
@@ -91,7 +93,7 @@ PODS:
     - SDWebImage/Core (= 5.9.1)
   - SDWebImage/Core (5.9.1)
   - SVProgressHUD (2.2.5)
-  - SwiftLint (0.30.1)
+  - SwiftLint (0.27.0)
   - SwiftUtils (4.2.1)
 
 DEPENDENCIES:
@@ -106,11 +108,12 @@ DEPENDENCIES:
   - GeoFire (~> 3.0)
   - MVVM-Swift (= 1.1.0)
   - NVActivityIndicatorView
+  - NVActivityIndicatorView/Extended
   - ObjectMapper (= 3.3.0)
   - RealmSwift
   - SDWebImage
   - SVProgressHUD
-  - SwiftLint (= 0.30.1)
+  - SwiftLint (= 0.27.0)
   - SwiftUtils (= 4.2.1)
 
 SPEC CHECKSUMS:
@@ -139,9 +142,9 @@ SPEC CHECKSUMS:
   RealmSwift: 0b7d7121e842724188123c6086831ae6d2952050
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   SwiftUtils: fa346feeac5a25eab7ea5d59f1857c6253cb8ab1
 
-PODFILE CHECKSUM: 4c3949eb5835e6b7374238b489461a7be4ed485c
+PODFILE CHECKSUM: 79d723e719648bf4dd664564fa33c18b018a0511
 
 COCOAPODS: 1.4.0

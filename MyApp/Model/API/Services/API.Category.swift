@@ -30,13 +30,13 @@ extension Api.Category {
                 case .success(let value):
                     guard let json = value as? JSObject,
                         let response = json["response"] as? JSObject,
-                        let food_Categories = (response["categories"] as? JSArray)?[3],
-                        let asian_Categories = (food_Categories["categories"] as? JSArray)?[3],
-                        let country_Categories = asian_Categories["categories"] as? JSArray else {
+                        let foodCategories = (response["categories"] as? JSArray)?[3],
+                        let asianCategories = (foodCategories["categories"] as? JSArray)?[3],
+                        let countryCategories = asianCategories["categories"] as? JSArray else {
                             completion(.failure(Api.Error.json))
                             return
                     }
-                    let categories = Mapper<Category>().mapArray(JSONArray: country_Categories)
+                    let categories = Mapper<Category>().mapArray(JSONArray: countryCategories)
                     completion(.success(categories))
                 case .failure(let error):
                     completion(.failure(error))

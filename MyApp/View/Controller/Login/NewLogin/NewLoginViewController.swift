@@ -42,13 +42,13 @@ class NewLoginViewController: ViewController {
     }
 
     private func login(email: String, password: String) {
-        startAnimating()
+        HUD.show()
         var ref: DatabaseReference!
         ref = Database.database().reference(withPath: "response/user")
         ref.queryOrdered(byChild: "email").queryEqual(toValue: email)
             .observe(.value, with: { [weak self] (snapshot) in
                 guard let this = self else { return }
-                this.stopAnimating()
+                HUD.dismiss()
                 let dataSnapShots: [DataSnapshot] = snapshot.children.allObjects as? [DataSnapshot] ?? []
                 var items: [[String: Any]] = []
                 for data in dataSnapShots {
@@ -80,7 +80,7 @@ class NewLoginViewController: ViewController {
                 }
             }) { [weak self] (error) in
                 guard let this = self else { return }
-                this.stopAnimating()
+                HUD.dismiss()
                 this.alert(error: error, handler: nil)
         }
     }

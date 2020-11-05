@@ -22,7 +22,7 @@ final class WebViewModel: ViewModel {
             guard var url = URLComponents(string: Api.Path.OAuth.authenticateUrl) else { return URLComponents() }
             let params = FoursquareParam()
             var queryItems: [URLQueryItem] = []
-            for item in params.toJson_Code {
+            for item in params.toJsonCode {
                 queryItems.append(URLQueryItem(name: item.key, value: item.value))
             }
             url.queryItems = queryItems
@@ -31,7 +31,7 @@ final class WebViewModel: ViewModel {
             guard var url = URLComponents(string: Api.Path.OAuth.accessTokenUrl) else { return URLComponents() }
             let params = FoursquareParam(code: code)
             var queryItems: [URLQueryItem] = []
-            for item in params.toJson_AccessToken {
+            for item in params.toJsonAccessToken {
                 queryItems.append(URLQueryItem(name: item.key, value: item.value))
             }
             url.queryItems = queryItems
@@ -50,9 +50,9 @@ final class WebViewModel: ViewModel {
 extension WebViewModel {
 
     struct FoursquareParam {
-        let clienID = App.Foursquare.clienID
-        let clientSecret = App.Foursquare.clienSecret
-        let grant_type = "authorization_code"
+        let clienID = Foursquare.clienID
+        let clientSecret = Foursquare.clienSecret
+        let grantType = "authorization_code"
         let responseType = "code"
         let redirectURI = "https://www.google.com"
         var code = ""
@@ -63,7 +63,7 @@ extension WebViewModel {
             self.code = code
         }
 
-        var toJson_Code: [String: String] {
+        var toJsonCode: [String: String] {
             var json: [String: String] = [:]
             json["client_id"] = clienID
             json["response_type"] = responseType
@@ -71,11 +71,11 @@ extension WebViewModel {
             return json
         }
 
-        var toJson_AccessToken: [String: String] {
+        var toJsonAccessToken: [String: String] {
             var json: [String: String] = [:]
             json["client_id"] = clienID
             json["client_secret"] = clientSecret
-            json["grant_type"] = grant_type
+            json["grant_type"] = grantType
             json["redirect_uri"] = redirectURI
             json["code"] = code
             return json

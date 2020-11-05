@@ -20,11 +20,12 @@ target 'MyApp' do
     pod 'AlamofireNetworkActivityIndicator', '2.3.0' # Controls the visibility of the network activity indicator on iOS using Alamofire.
 
     # Utils
-    pod 'SwiftLint', '0.30.1' # A tool to enforce Swift style and conventions.
+    pod 'SwiftLint', '0.27.0' # A tool to enforce Swift style and conventions.
     pod 'SwiftUtils', '4.2.1'
     pod 'SVProgressHUD'
     pod 'SDWebImage'
     pod 'NVActivityIndicatorView'
+    pod 'NVActivityIndicatorView/Extended'
 
     # Crash reporting & beta deployment
     pod 'Crashlytics'

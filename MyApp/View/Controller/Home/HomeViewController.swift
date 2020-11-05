@@ -115,13 +115,13 @@ final class HomeViewController: ViewController {
     // Load data FoursquareAPI
     private func loadDataFoursquare(isLoadMore: Bool) {
         isLoadingApi = true
-        startAnimating()
+        HUD.show()
         switch homeType {
         case .openNow:
             viewModel.discoveryOpenNow(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     if !isLoadMore {
@@ -136,7 +136,7 @@ final class HomeViewController: ViewController {
             viewModel.discoveryNearly(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     if !isLoadMore {
@@ -153,13 +153,13 @@ final class HomeViewController: ViewController {
     // Load data from Firebase
     private func loadDataFirebase(isLoadMore: Bool) {
         isLoadingApi = true
-        startAnimating()
+        HUD.show()
         switch homeType {
         case .nearly:
             viewModel.loadNearVenueFirebase(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     this.noResultView.alpha = restaurants.isEmpty ? 1 : 0
@@ -172,7 +172,7 @@ final class HomeViewController: ViewController {
             viewModel.loadTrendingVenueFirebase(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     this.noResultView.alpha = restaurants.isEmpty ? 1 : 0
@@ -187,13 +187,13 @@ final class HomeViewController: ViewController {
     // Find location according to radius
     func discoveryVenues(isLoadMore: Bool) {
         isLoadingApi = true
-        startAnimating()
+        HUD.show()
         switch homeType {
         case .nearly:
             viewModel.discoveryVenues(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     this.noResultView.alpha = restaurants.isEmpty ? 1 : 0
@@ -206,7 +206,7 @@ final class HomeViewController: ViewController {
             viewModel.discoveryVenues(isLoadMore: isLoadMore) { [weak self] (result) in
                 guard let this = self else { return }
                 this.isLoadingApi = false
-                this.stopAnimating()
+                HUD.dismiss()
                 switch result {
                 case .success(let restaurants):
                     this.noResultView.alpha = restaurants.isEmpty ? 1 : 0
@@ -288,7 +288,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
-        case UICollectionView.elementKindSectionHeader:
+        case UICollectionElementKindSectionHeader:
             headerView = collectionView.dequeue(header: HomeHeaderView.self, forIndexPath: indexPath)
             guard let header = headerView else { return UICollectionReusableView() }
             header.delegate = self
