@@ -44,7 +44,7 @@ final class MenuViewController: ViewController {
         pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         guard let firstVC = arrayVC.first, let pageVC = pageVC else { return }
         contentView.addSubview(pageVC.view)
-        addChild(pageVC)
+        addChildViewController(pageVC)
         pageVC.view.frame = contentView.bounds
         pageVC.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
     }

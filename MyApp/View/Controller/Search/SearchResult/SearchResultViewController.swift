@@ -54,7 +54,7 @@ final class SearchResultViewController: UIViewController {
         pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         if let pageVC = pageVC {
             containerView.addSubview(pageVC.view)
-            addChild(pageVC)
+            addChildViewController(pageVC)
             pageVC.view.frame = containerView.bounds
             pageVC.setViewControllers([searchCorrectVC], direction: .forward, animated: true, completion: nil)
         }

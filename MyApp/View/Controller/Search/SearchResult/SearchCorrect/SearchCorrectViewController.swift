@@ -30,22 +30,22 @@ final class SearchCorrectViewController: ViewController {
             scrollToTop()
         }
         isLoadingApi = true
-        startAnimating()
+        HUD.show()
         viewModel.searchCorrect(isLoadMore: isLoadMore, searchParams: searchParams) { [weak self] (result) in
             guard let this = self else { return }
             switch result {
             case .success(let restaurants):
                 if restaurants.isEmpty {
-                    this.view.bringSubviewToFront(this.noResultView)
+                    this.view.bringSubview(toFront: this.noResultView)
                 } else {
-                    this.view.bringSubviewToFront(this.tableView)
+                    this.view.bringSubview(toFront: this.tableView)
                     this.tableView.reloadData()
                 }
             case .failure(let error):
                 this.alert(error: error)
             }
             this.isLoadingApi = false
-            this.stopAnimating()
+            HUD.dismiss()
         }
     }
 

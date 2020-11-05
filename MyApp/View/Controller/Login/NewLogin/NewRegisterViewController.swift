@@ -73,14 +73,14 @@ class NewRegisterViewController: ViewController {
     }
 
     func checkToRegister() {
-        startAnimating()
+        HUD.show()
         guard let email = emailTextField.text else { return }
         var ref: DatabaseReference!
         ref = Database.database().reference(withPath: "response/users")
         ref.queryOrdered(byChild: "email").queryEqual(toValue: email)
             .observe(.value, with: { [weak self] (snapshot) in
                 guard let this = self else { return }
-                this.stopAnimating()
+                HUD.dismiss()
                 if snapshot.childrenCount == 0 {
                     this.isExistedEmailErrorConstraint.constant = 0
                     this.register() // check exist email
@@ -90,7 +90,7 @@ class NewRegisterViewController: ViewController {
 
             }) { [weak self] (error) in
                 guard let this = self else { return }
-                this.stopAnimating()
+                HUD.dismiss()
                 this.alert(error: error, handler: nil)
         }
     }

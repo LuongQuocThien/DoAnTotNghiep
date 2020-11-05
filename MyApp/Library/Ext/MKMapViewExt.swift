@@ -37,7 +37,7 @@ extension MKMapView {
                 return
             }
             let route = response.routes[0]
-            this.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
+            this.add((route.polyline), level: MKOverlayLevel.aboveRoads)
             let rect = route.polyline.boundingMapRect
             let edge = UIEdgeInsets(top: 75, left: 75, bottom: 75, right: 75)
             this.setVisibleMapRect(rect, edgePadding: edge, animated: true)

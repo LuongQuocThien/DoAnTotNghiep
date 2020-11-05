@@ -25,10 +25,10 @@ final class ListAlbumViewController: ViewController {
     }
 
     func getDetailPhotos() {
-        startAnimating()
+        HUD.show()
         viewModel.getPhotos { [weak self] (result) in
             guard let this = self else { return }
-            this.stopAnimating()
+            HUD.dismiss()
             switch result {
             case .success:
                 this.collectionView.reloadData()

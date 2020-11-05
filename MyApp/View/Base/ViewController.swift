@@ -10,7 +10,7 @@ import UIKit
 import MVVM
 import NVActivityIndicatorView
 
-class ViewController: UIViewController, MVVM.View, NVActivityIndicatorViewable {
+class ViewController: UIViewController, MVVM.View {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +81,9 @@ class ViewController: UIViewController, MVVM.View, NVActivityIndicatorViewable {
     }
 
     private func configTextFieldSearchBar() {
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
+        let attributes = [
+            NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 14)] as [String: Any]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = attributes
     }
 
     func dismissKeyboard() {

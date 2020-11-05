@@ -73,9 +73,9 @@ final class CommentViewController: ViewController {
     }
 
     func uploadMedia(title: String, content: String, rating: Int) {
-        startAnimating()
+        HUD.show()
         guard !images.isEmpty else {
-            stopAnimating()
+            HUD.dismiss()
             saveCommentData(title: title, content: content, rating: rating, imagesURLString: [])
             return
         }
@@ -84,20 +84,20 @@ final class CommentViewController: ViewController {
         for image in images {
             let imageName = NSUUID().uuidString
             let storageRef = Storage.storage().reference().child("images/comments/\(imageName).jpg")
-            if let uploadData = image.jpegData(compressionQuality: 0.3) {
-                storageRef.putData(uploadData, metadata: nil) { [weak self] (metaData, error) in
+            if let uploadData = UIImageJPEGRepresentation(image, 0.3) {
+                storageRef.putData(uploadData, metadata: nil) { [weak self] (_, error) in
                     guard let this = self else { return }
                     if let error = error {
                         this.alert(error: error)
                         return
                     } else {
-                        storageRef.downloadURL(completion: { (url, error) in
+                        storageRef.downloadURL(completion: { (url, _) in
                             guard let urlString = url?.absoluteString else { return }
                             imagesURLString.append(urlString)
                             // Check finish upload image to save database
                             if imagesURLString.count == this.images.count {
                                 this.saveCommentData(title: title, content: content, rating: rating, imagesURLString: imagesURLString)
-                                this.stopAnimating()
+                                HUD.dismiss()
                             }
                         })
                     }
@@ -163,7 +163,7 @@ extension CommentViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
-        case UICollectionView.elementKindSectionHeader:
+        case UICollectionElementKindSectionHeader:
             headerView = collectionView.dequeue(header: CommentHeaderCollectionView.self, forIndexPath: indexPath)
             guard let view = headerView else { return UICollectionReusableView() }
             view.delegate = self
@@ -204,8 +204,9 @@ extension CommentViewController: ImageUploadCollectionViewCellDelegate {
 
 extension CommentViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.allowsEditing = true
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             images.append(image)
             collectionView.reloadData()
         }

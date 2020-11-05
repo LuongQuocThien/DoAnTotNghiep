@@ -103,7 +103,7 @@ final class SearchNearlyViewController: ViewController, UIGestureRecognizerDeleg
         mapView.addAnnotations(viewModel.getAnnotations())
         guard let coordinate = viewModel.searchingLocation else { return }
         let circle = MKCircle(center: coordinate, radius: viewModel.radiusSearch as CLLocationDistance)
-        mapView.addOverlay(circle)
+        mapView.add(circle)
         mapView.reloadInputViews()
     }
 
@@ -118,7 +118,7 @@ final class SearchNearlyViewController: ViewController, UIGestureRecognizerDeleg
         mapView.addAnnotations(viewModel.getAnnotations())
 
         let circle = MKCircle(center: coordinate, radius: viewModel.radiusSearch as CLLocationDistance)
-        mapView.addOverlay(circle)
+        mapView.add(circle)
         mapView.reloadInputViews()
     }
 
