@@ -2,7 +2,7 @@
 //  SearchPointAnotation.swift
 //  MyApp
 //
-//  Created by TAN HUYNH on 3/2/19.
+//  Created by THIEN LUONG Q. on 3/2/19.
 //  Copyright © 2019 Asian Tech Co., Ltd. All rights reserved.
 //
 

@@ -27,29 +27,6 @@ class NotificationViewController: ViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getFirebaseData()
-    }
-
-    func getFirebaseData() {
-        var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "response/bill")
-        ref.queryOrdered(byChild: "userId").queryEqual(toValue: Session.shared.userId)
-            .observe(.value, with: { [weak self] (snapshot) in
-                guard let this = self else { return }
-                let dataSnapShots: [DataSnapshot] = snapshot.children.allObjects as? [DataSnapshot] ?? []
-                var items: [[String: Any]] = []
-                for data in dataSnapShots {
-                    if let jsonObject = data.value as? [String: Any] {
-                        items.append(jsonObject)
-                    }
-                }
-
-                let infos = Mapper<NewOrdersInfo>().mapArray(JSONArray: items)
-                this.ordersInfos = infos
-                this.tableView.reloadData()
-            }) { (error) in
-                self.alert(error: error)
-        }
     }
 }
 
