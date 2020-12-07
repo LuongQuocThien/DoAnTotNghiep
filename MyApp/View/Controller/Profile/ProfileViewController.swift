@@ -73,7 +73,9 @@ final class ProfileViewController: ViewController {
     }
 
     func getProfile() {
+        HUD.show()
         viewModel.getProfile { [weak self] (result) in
+            HUD.dismiss()
             guard let this = self else { return }
             switch result {
             case .success:

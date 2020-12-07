@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import Alamofire
 import MVVM
 import MapKit
 import FirebaseDatabase
@@ -157,7 +156,7 @@ extension HomeViewModel {
         let center = CLLocation(latitude: 16.06064813996494, longitude: 108.2169811846068)
         let circleQuery = geoFire.query(at: center, withRadius: 0.65)
         var dataSnapShots: [DataSnapshot] = []
-        circleQuery.observe(.keyEntered) { ( _ , snapshot: DataSnapshot) in
+        circleQuery.observe(.keyEntered) { ( _, snapshot: DataSnapshot) in
             dataSnapShots.append(snapshot)
         }
 
