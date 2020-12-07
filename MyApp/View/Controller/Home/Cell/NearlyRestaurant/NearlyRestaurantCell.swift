@@ -25,6 +25,15 @@ final class NearlyRestaurantCell: UITableViewCell, View {
         }
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = ""
+        addressLabel.text = ""
+        typeRestaurantLabel.text = ""
+        checkinsCountLabel.text = ""
+        thumbnailImageView.image = nil
+    }
+
     // MARK: - Private
     private func updateCell() {
         guard let viewModel = viewModel else { return }

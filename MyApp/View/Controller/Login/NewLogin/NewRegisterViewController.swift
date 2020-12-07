@@ -61,9 +61,7 @@ class NewRegisterViewController: ViewController {
     }
 
     func isValidPassword(password: String) -> Bool {
-        let regularExpression = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
-        let passwordValidation = NSPredicate(format: "SELF MATCHES %@", regularExpression)
-        return passwordValidation.evaluate(with: password)
+        return true
     }
 
     func isValidEmail(email: String) -> Bool {
@@ -76,7 +74,7 @@ class NewRegisterViewController: ViewController {
         HUD.show()
         guard let email = emailTextField.text else { return }
         var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "response/users")
+        ref = Database.database().reference(withPath: "response/user")
         ref.queryOrdered(byChild: "email").queryEqual(toValue: email)
             .observe(.value, with: { [weak self] (snapshot) in
                 guard let this = self else { return }
@@ -113,7 +111,7 @@ class NewRegisterViewController: ViewController {
 
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("response").child("users").childByAutoId().setValue(data)
+        ref.child("response").child("user").childByAutoId().setValue(data)
 
         delegate?.controller(self, needPerform: .login(email: email, password: password))
         navigationController?.popViewController(animated: true)
@@ -127,5 +125,9 @@ class NewRegisterViewController: ViewController {
 
     @IBAction func backButtonTouchUpInside(_ sender: Any) {
         navigationController?.popViewController(animated: false)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismissKeyboard()
     }
 }

@@ -18,7 +18,7 @@ protocol NewLoginViewControllerDelegate: class {
 class NewLoginViewController: ViewController {
 
     enum Action {
-        case loginSuccess()
+        case loginSuccess
     }
 
     @IBOutlet private weak var emailTextField: UITextField!
@@ -71,14 +71,14 @@ class NewLoginViewController: ViewController {
                     Session.shared.avatarUrlSring = user.avatarUrlString
                     Session.shared.email = user.email
 
-                    this.delegate?.controller(this, needPerform: .loginSuccess())
-                    this.navigationController?.popViewController(animated: true)
+                    this.delegate?.controller(this, needPerform: .loginSuccess)
+                    this.navigationController?.popViewController(animated: false)
 //                    AppDelegate.shared.setRootViewController(root: .home)
                 } else {
                     this.heightErrorMessageConstraint.constant = 100
                     this.passwordTextFied.text = ""
                 }
-            }) { [weak self] (error) in
+            }) { [weak self] error in
                 guard let this = self else { return }
                 HUD.dismiss()
                 this.alert(error: error, handler: nil)
@@ -111,6 +111,10 @@ class NewLoginViewController: ViewController {
         } else {
             navigationController?.popViewController(animated: false)
         }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismissKeyboard()
     }
 }
 

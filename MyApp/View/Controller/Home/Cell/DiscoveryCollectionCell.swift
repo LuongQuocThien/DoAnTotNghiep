@@ -24,6 +24,14 @@ final class DiscoveryCollectionCell: UICollectionViewCell, View {
         }
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = ""
+        commentLabel.text = ""
+        typeRestaurantLabel.text = ""
+        thumbnailImageView.image = nil
+    }
+
     // MARK: - Private
     private func updateCell() {
         titleLabel.text = viewModel.name

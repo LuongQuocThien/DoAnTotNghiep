@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644F4062257BCD0600AAE5B5 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F4061257BCD0600AAE5B5 /* ImageManager.swift */; };
+		645186E7257933CC00A49540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 645186E6257933CC00A49540 /* GoogleService-Info.plist */; };
 		64F377B5254E64A5006B8F27 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F377B4254E64A5006B8F27 /* Key.swift */; };
 		64F37870254E6872006B8F27 /* CommentHeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377B8254E686F006B8F27 /* CommentHeaderCollectionView.xib */; };
 		64F37871254E6872006B8F27 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377B9254E686F006B8F27 /* CommentViewController.xib */; };
@@ -30,7 +32,6 @@
 		64F37883254E6872006B8F27 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377D0254E6870006B8F27 /* LocationViewController.xib */; };
 		64F37884254E6872006B8F27 /* NewRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377D3254E6870006B8F27 /* NewRegisterViewController.xib */; };
 		64F37885254E6872006B8F27 /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F377D4254E6870006B8F27 /* NewLoginViewController.swift */; };
-		64F37886254E6872006B8F27 /* venue-photo.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F377D5254E6870006B8F27 /* venue-photo.json */; };
 		64F37887254E6872006B8F27 /* NewLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377D6254E6870006B8F27 /* NewLoginViewController.xib */; };
 		64F37888254E6872006B8F27 /* NewRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F377D7254E6870006B8F27 /* NewRegisterViewController.swift */; };
 		64F37889254E6872006B8F27 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F377D9254E6870006B8F27 /* WebViewController.swift */; };
@@ -151,7 +152,6 @@
 		64F37903254E6900006B8F27 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F378FE254E68FF006B8F27 /* TableCell.swift */; };
 		64F37904254E6900006B8F27 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F378FF254E6900006B8F27 /* CollectionCell.swift */; };
 		64F37905254E6900006B8F27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37900254E6900006B8F27 /* ViewController.swift */; };
-		64F37907254E69D4006B8F27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64F37906254E69D4006B8F27 /* GoogleService-Info.plist */; };
 		64F37914254E743F006B8F27 /* MKMapViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37909254E743E006B8F27 /* MKMapViewExt.swift */; };
 		64F37915254E743F006B8F27 /* InputViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3790A254E743E006B8F27 /* InputViewExt.swift */; };
 		64F37916254E743F006B8F27 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3790B254E743E006B8F27 /* StringExt.swift */; };
@@ -181,7 +181,6 @@
 		64F3798C254E7F4A006B8F27 /* TrendingRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37974254E7F4A006B8F27 /* TrendingRestaurant.swift */; };
 		64F3798D254E7F4A006B8F27 /* FavoriteRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37975254E7F4A006B8F27 /* FavoriteRestaurant.swift */; };
 		64F3798E254E7F4A006B8F27 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37976254E7F4A006B8F27 /* Comment.swift */; };
-		64F3798F254E7F4A006B8F27 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 64F37977254E7F4A006B8F27 /* .gitkeep */; };
 		64F37990254E7F4A006B8F27 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37978254E7F4A006B8F27 /* UserProfile.swift */; };
 		64F37991254E7F4A006B8F27 /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F37979254E7F4A006B8F27 /* GeoLocation.swift */; };
 		64F37992254E7F4A006B8F27 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3797A254E7F4A006B8F27 /* Photo.swift */; };
@@ -244,6 +243,8 @@
 		2471FFF2396065422C1E00E8 /* Pods-MyApp.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.staging.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.staging.xcconfig"; sourceTree = "<group>"; };
 		47FCF93A9948D710C06CECAF /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 		48F8D478234569385F88AC15 /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		644F4061257BCD0600AAE5B5 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		645186E6257933CC00A49540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64F377B4254E64A5006B8F27 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		64F377B8254E686F006B8F27 /* CommentHeaderCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentHeaderCollectionView.xib; sourceTree = "<group>"; };
 		64F377B9254E686F006B8F27 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
@@ -267,7 +268,6 @@
 		64F377D0254E6870006B8F27 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		64F377D3254E6870006B8F27 /* NewRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewRegisterViewController.xib; sourceTree = "<group>"; };
 		64F377D4254E6870006B8F27 /* NewLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
-		64F377D5254E6870006B8F27 /* venue-photo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "venue-photo.json"; sourceTree = "<group>"; };
 		64F377D6254E6870006B8F27 /* NewLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewLoginViewController.xib; sourceTree = "<group>"; };
 		64F377D7254E6870006B8F27 /* NewRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRegisterViewController.swift; sourceTree = "<group>"; };
 		64F377D9254E6870006B8F27 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -388,7 +388,6 @@
 		64F378FE254E68FF006B8F27 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		64F378FF254E6900006B8F27 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		64F37900254E6900006B8F27 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		64F37906254E69D4006B8F27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64F37909254E743E006B8F27 /* MKMapViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExt.swift; sourceTree = "<group>"; };
 		64F3790A254E743E006B8F27 /* InputViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewExt.swift; sourceTree = "<group>"; };
 		64F3790B254E743E006B8F27 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -418,7 +417,6 @@
 		64F37974254E7F4A006B8F27 /* TrendingRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingRestaurant.swift; sourceTree = "<group>"; };
 		64F37975254E7F4A006B8F27 /* FavoriteRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRestaurant.swift; sourceTree = "<group>"; };
 		64F37976254E7F4A006B8F27 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		64F37977254E7F4A006B8F27 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		64F37978254E7F4A006B8F27 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		64F37979254E7F4A006B8F27 /* GeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
 		64F3797A254E7F4A006B8F27 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -587,11 +585,10 @@
 		64F377D2254E6870006B8F27 /* NewLogin */ = {
 			isa = PBXGroup;
 			children = (
-				64F377D3254E6870006B8F27 /* NewRegisterViewController.xib */,
 				64F377D4254E6870006B8F27 /* NewLoginViewController.swift */,
-				64F377D5254E6870006B8F27 /* venue-photo.json */,
 				64F377D6254E6870006B8F27 /* NewLoginViewController.xib */,
 				64F377D7254E6870006B8F27 /* NewRegisterViewController.swift */,
+				64F377D3254E6870006B8F27 /* NewRegisterViewController.xib */,
 			);
 			path = NewLogin;
 			sourceTree = "<group>";
@@ -1068,7 +1065,6 @@
 				64F37974254E7F4A006B8F27 /* TrendingRestaurant.swift */,
 				64F37975254E7F4A006B8F27 /* FavoriteRestaurant.swift */,
 				64F37976254E7F4A006B8F27 /* Comment.swift */,
-				64F37977254E7F4A006B8F27 /* .gitkeep */,
 				64F37978254E7F4A006B8F27 /* UserProfile.swift */,
 				64F37979254E7F4A006B8F27 /* GeoLocation.swift */,
 				64F3797A254E7F4A006B8F27 /* Photo.swift */,
@@ -1155,7 +1151,7 @@
 		EC0105411E8F8ADF00CE013D /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				64F37906254E69D4006B8F27 /* GoogleService-Info.plist */,
+				645186E6257933CC00A49540 /* GoogleService-Info.plist */,
 				EC0105421E8F8ADF00CE013D /* Info.plist */,
 			);
 			path = Supports;
@@ -1199,6 +1195,7 @@
 				64F378FD254E68FF006B8F27 /* LocationManager.swift */,
 				64F378FE254E68FF006B8F27 /* TableCell.swift */,
 				64F37900254E6900006B8F27 /* ViewController.swift */,
+				644F4061257BCD0600AAE5B5 /* ImageManager.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1382,7 +1379,6 @@
 				64F3788A254E6872006B8F27 /* WebViewController.xib in Resources */,
 				64F378C1254E6872006B8F27 /* SearchingViewController.xib in Resources */,
 				64F37871254E6872006B8F27 /* CommentViewController.xib in Resources */,
-				64F37886254E6872006B8F27 /* venue-photo.json in Resources */,
 				64F378C6254E6872006B8F27 /* HistorySearchTableCell.xib in Resources */,
 				64F3789C254E6872006B8F27 /* AddFoodItemPopupViewController.xib in Resources */,
 				64F378BA254E6872006B8F27 /* PaymentViewController.xib in Resources */,
@@ -1402,10 +1398,10 @@
 				64F3788C254E6872006B8F27 /* LoginViewController.xib in Resources */,
 				64F378B1254E6872006B8F27 /* FilterViewController.xib in Resources */,
 				64F378F6254E6873006B8F27 /* EditProfileViewController.xib in Resources */,
-				64F3798F254E7F4A006B8F27 /* .gitkeep in Resources */,
 				64F37870254E6872006B8F27 /* CommentHeaderCollectionView.xib in Resources */,
 				64F378F1254E6873006B8F27 /* ProfileViewController.xib in Resources */,
 				64F37884254E6872006B8F27 /* NewRegisterViewController.xib in Resources */,
+				645186E7257933CC00A49540 /* GoogleService-Info.plist in Resources */,
 				64F378EB254E6873006B8F27 /* MenuViewController.xib in Resources */,
 				64F378B5254E6872006B8F27 /* FavoriteTableViewCell.xib in Resources */,
 				64F37887254E6872006B8F27 /* NewLoginViewController.xib in Resources */,
@@ -1416,7 +1412,6 @@
 				64F378D3254E6873006B8F27 /* SearchResultViewController.xib in Resources */,
 				64F378A7254E6872006B8F27 /* DiscoveryCollectionCell.xib in Resources */,
 				64F37878254E6872006B8F27 /* NotificationViewController.xib in Resources */,
-				64F37907254E69D4006B8F27 /* GoogleService-Info.plist in Resources */,
 				64F378C3254E6872006B8F27 /* HistorySearchViewController.xib in Resources */,
 				64F378CC254E6872006B8F27 /* FoosterTableView.xib in Resources */,
 				64F37872254E6872006B8F27 /* ImageUploadCollectionViewCell.xib in Resources */,
@@ -1561,6 +1556,7 @@
 				64F37880254E6872006B8F27 /* LocationTableViewCell.swift in Sources */,
 				64F37902254E6900006B8F27 /* LocationManager.swift in Sources */,
 				64F378EE254E6873006B8F27 /* TabBarViewController.swift in Sources */,
+				644F4062257BCD0600AAE5B5 /* ImageManager.swift in Sources */,
 				64F378CA254E6872006B8F27 /* RecentlyViewController.swift in Sources */,
 				64F3793C254E7468006B8F27 /* API.Search.swift in Sources */,
 				64F378F2254E6873006B8F27 /* ProfileTableCellViewModel.swift in Sources */,
@@ -1838,7 +1834,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MyApp/Supports/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1853,7 +1849,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MyApp/Supports/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1946,7 +1942,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MyApp/Supports/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
