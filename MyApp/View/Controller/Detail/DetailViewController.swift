@@ -112,6 +112,10 @@ final class DetailViewController: ViewController {
         tableViewRestaurant.contentInset = Configure.contentInset
     }
 
+    private func makeOrder() {
+        
+    }
+
     @IBAction func commentButtonTouchUpInside(_ sender: Any) {
         if !Session.shared.isLogin {
             let vc = NewLoginViewController()

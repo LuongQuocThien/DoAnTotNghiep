@@ -127,8 +127,7 @@ extension HomeViewModel {
         }
         var ref: DatabaseReference!
         ref = Database.database().reference(withPath: "response/venue")
-//        ref.queryOrdered(byChild: "stats/checkinsCount").queryStarting(atValue: 50)
-        ref.queryLimited(toLast: UInt(numberOfItems))
+        ref.queryOrdered(byChild: "stats/checkinsCount").queryStarting(atValue: 0)
         .observe(.value, with: { [weak self] (snapshot) in
             guard let this = self else { return }
             let dataSnapShots: [DataSnapshot] = snapshot.children.allObjects as? [DataSnapshot] ?? []

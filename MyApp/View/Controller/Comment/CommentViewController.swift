@@ -19,7 +19,7 @@ protocol CommentViewControllerDelegate: class {
 final class CommentViewController: ViewController {
 
     enum Action {
-        case reloadDataComments()
+        case reloadDataComments
     }
 
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -48,7 +48,7 @@ final class CommentViewController: ViewController {
         collectionView.collectionViewLayout = layout
     }
 
-    //Show alert
+    // Show alert
     func showAlert() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(_: UIAlertAction) in
@@ -86,6 +86,7 @@ final class CommentViewController: ViewController {
             let storageRef = Storage.storage().reference().child("images/comments/\(imageName).jpg")
             if let uploadData = UIImageJPEGRepresentation(image, 0.3) {
                 storageRef.putData(uploadData, metadata: nil) { [weak self] (_, error) in
+                    HUD.dismiss()
                     guard let this = self else { return }
                     if let error = error {
                         this.alert(error: error)
@@ -136,7 +137,7 @@ final class CommentViewController: ViewController {
         ref.child("response").child("comment").child(id).setValue(data)
 
         // Reload data
-        delegate?.controller(self, needPerform: .reloadDataComments())
+        delegate?.controller(self, needPerform: .reloadDataComments)
         navigationController?.popViewController(animated: true)
     }
 

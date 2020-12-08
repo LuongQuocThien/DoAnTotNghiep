@@ -47,6 +47,7 @@ class NotificationViewController: ViewController {
                 let infos = Mapper<NewOrdersInfo>().mapArray(JSONArray: items)
                 this.ordersInfos = infos
                 this.tableView.reloadData()
+                this.tableView.isHidden = this.ordersInfos.isEmpty
             }) { (error) in
                 self.alert(error: error)
         }

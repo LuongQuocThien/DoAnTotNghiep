@@ -101,15 +101,15 @@ final class HomeViewController: ViewController {
 
     // MARK: - Private
     private func callAPI(isLoadMore: Bool = false) {
-        if !isLoadMore {
-            scrollToTop()
-        }
+//        if !isLoadMore {
+//            scrollToTop()
+//        }
         // Foursquare
 //        loadDataFoursquare(isLoadMore: isLoadMore)
 
         // Firebase
-//        loadDataFirebase(isLoadMore: isLoadMore)
-        discoveryVenues(isLoadMore: isLoadMore)
+        loadDataFirebase(isLoadMore: isLoadMore)
+//        discoveryVenues(isLoadMore: isLoadMore)
     }
 
     // Load data FoursquareAPI

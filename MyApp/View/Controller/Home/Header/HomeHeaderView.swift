@@ -34,7 +34,6 @@ final class HomeHeaderView: UICollectionReusableView, View {
     override func awakeFromNib() {
         super.awakeFromNib()
         configUI()
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(runImage), userInfo: nil, repeats: true)
     }
 
     func toggleTimer(isOff: Bool) {
