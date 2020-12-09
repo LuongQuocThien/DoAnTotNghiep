@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 final class PasswordViewController: ViewController {
 
@@ -31,7 +32,29 @@ final class PasswordViewController: ViewController {
     }
 
     @IBAction private func submitButtonTouchUpInside(_ sender: UIButton) {
-        // TODO: - Submit request to change password
+        view.endEditing(true)
+        guard let currentPass = currentPasswordTextField.text,
+            let newPass = newpasswordTextField.text,
+            let confirmPass = confirmNewPasswordTextField.text else { return }
+        if currentPass.isEmpty || newPass.isEmpty || confirmPass.isEmpty {
+            showAlert(title: "", message: "Vui lòng nhập đầy đủ thông tin!", buttons: ["Nhập lại"], handler: nil)
+        } else if currentPass != Session.shared.password {
+            showAlert(title: "", message: "Mật khẩu hiện tại không chính xác!", buttons: ["Nhập lại"], handler: nil)
+        } else if newPass != confirmPass {
+            showAlert(title: "", message: "Xác nhận mật khẩu ko trùng khớp", buttons: ["Nhập lại"], handler: nil)
+        } else {
+            HUD.show()
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            ref.child("response").child("user").child(Session.shared.userId).updateChildValues(["password": newPass])
+            Session.shared.password = newPass
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                HUD.dismiss()
+                self.showAlert(title: "", message: "Đổi mật khẩu thành công!", buttons: ["Xác nhận"], handler: { (_) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+            }
+        }
     }
 }
 

@@ -17,6 +17,8 @@ final class MapViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel = MapViewModel()
+    private var locationManager: CLLocationManager!
+    private var currentLocation: CLLocation?
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -38,7 +40,7 @@ final class MapViewController: UIViewController {
 
     // MARK: - Private
     private func configLocationServices() {
-        LocationManager.shared.configLocationService()
+//        LocationManager.shared.configLocationService()
     }
 
     func loadDataMapView() {
@@ -48,6 +50,14 @@ final class MapViewController: UIViewController {
             let annotation = PointAnnotation(coordinate: viewModel.coordinate, title: viewModel.name, subtitle: viewModel.address)
             mapView.addAnnotation(annotation)
             mapView.delegate = self
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        // Check for Location Services
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
     }
 
     @IBAction private func directButtonTouchUpInsde(_ sender: UIButton) {
@@ -101,6 +111,10 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         guard let annotation = mapView.annotations.first as? PointAnnotation else { return }
         mapView.selectAnnotation(annotation, animated: true)
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        return
     }
 }
 

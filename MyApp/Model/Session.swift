@@ -44,6 +44,14 @@ final class Session {
         }
     }
 
+    var password: String {
+        get {
+            return userDefault.string(forKey: App.UserDefault.password) ?? ""
+        } set {
+            userDefault.set(newValue, forKey: App.UserDefault.password)
+        }
+    }
+
     var email: String {
         get {
             return userDefault.string(forKey: App.UserDefault.email) ?? ""

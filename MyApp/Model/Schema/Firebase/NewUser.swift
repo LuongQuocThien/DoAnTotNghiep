@@ -19,10 +19,12 @@ final class NewUser: Mappable {
     var firstName = ""
     var lastName = ""
     var dateOfBirth = ""
-    var gender = ""
+    var gender = 0
     var address = ""
     var city = ""
     var avatarUrlString = ""
+    var phone = ""
+    var info = ""
 
     init() { }
 
@@ -39,5 +41,8 @@ final class NewUser: Mappable {
         address <- map["address"]
         city <- map["city"]
         avatarUrlString <- map["avatar"]
+        phone <- map["phone"]
+        info <- map["info"]
     }
 }
+
