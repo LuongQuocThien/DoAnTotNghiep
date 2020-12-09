@@ -26,9 +26,6 @@ final class SearchCorrectViewController: ViewController {
     }
 
     func searchCorrect(isLoadMore: Bool, searchParams: SearchResultViewController.SearchParam?) {
-        if !isLoadMore {
-            scrollToTop()
-        }
         isLoadingApi = true
         HUD.show()
         viewModel.searchCorrect(isLoadMore: isLoadMore, searchParams: searchParams) { [weak self] (result) in
@@ -59,10 +56,6 @@ final class SearchCorrectViewController: ViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-    }
-
-    private func scrollToTop() {
-        tableView.setContentOffset(.zero, animated: false)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -101,12 +94,12 @@ extension SearchCorrectViewController: UITableViewDelegate {
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let height = scrollView.frame.size.height + 120
-        let contentOffsetY = scrollView.contentOffset.y
-        let distanceFromBottom = scrollView.contentSize.height - contentOffsetY
-        if viewModel.getNumberOfRow() != 0 && distanceFromBottom <= height {
-            searchCorrect(isLoadMore: true, searchParams: viewModel.searchParams)
-        }
+//        let height = scrollView.frame.size.height + 120
+//        let contentOffsetY = scrollView.contentOffset.y
+//        let distanceFromBottom = scrollView.contentSize.height - contentOffsetY
+//        if viewModel.getNumberOfRow() != 0 && distanceFromBottom <= height {
+//            searchCorrect(isLoadMore: true, searchParams: viewModel.searchParams)
+//        }
     }
 }
 

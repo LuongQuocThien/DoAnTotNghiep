@@ -32,7 +32,7 @@ final class SearchViewController: ViewController {
     }
     var state: State = .searching {
         didSet {
-            showView()
+//            showView()
         }
     }
 
@@ -129,8 +129,8 @@ final class SearchViewController: ViewController {
     private func searchWithKeyword(_ keyword: String) {
         guard !keyword.isEmpty else { return }
         viewModel.keyword = keyword
-        searchResult.searchParam = viewModel.getParamForSearchResult()
-        state = .searchResult
+        searchingVC.searchParam = viewModel.getParamForSearchResult()
+        searchingVC.searchType = .correctly
     }
 }
 

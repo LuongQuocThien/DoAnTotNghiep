@@ -37,9 +37,9 @@ final class SearchResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        configPageVC()
-        setDisplayTab()
+//        setupUI()
+//        configPageVC()
+//        setDisplayTab()
     }
 
     private func setupUI() {
