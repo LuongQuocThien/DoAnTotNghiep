@@ -23,5 +23,6 @@ extension App {
         static let userAvatar = "currentUserAvatar"
         static let userId = "userId"
         static let password = "password"
+        static let phone = "phone"
     }
 }

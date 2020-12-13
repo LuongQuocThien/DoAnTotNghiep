@@ -2,7 +2,7 @@
 //  NewRegisterViewController.swift
 //  MyApp
 //
-//  Created by TanHuynh on 11/7/19.
+//  Created by Thien Luong Q on 11/7/19.
 //  Copyright © 2019 Asian Tech Co., Ltd. All rights reserved.
 //
 
@@ -96,7 +96,8 @@ class NewRegisterViewController: ViewController {
     func register() {
         guard let email = emailTextField.text,
             let password = passwordTextField.text else { return }
-        let data = ["id" : NSUUID().uuidString,
+        let id = NSUUID().uuidString
+        let data = ["id": id,
                     "email": email,
                     "password": password,
                     "firstName": "",
@@ -111,10 +112,10 @@ class NewRegisterViewController: ViewController {
 
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        ref.child("response").child("user").childByAutoId().setValue(data)
+        ref.child("response").child("user").child(id).setValue(data)
 
         delegate?.controller(self, needPerform: .login(email: email, password: password))
-        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: false)
     }
 
     @IBAction func registerButtonTouchUpInside(_ sender: Any) {

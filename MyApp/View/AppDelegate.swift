@@ -36,12 +36,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         FirebaseApp.configure()
-        setRootViewController(root: .home)
-//        if Session.shared.isLogin {
-//            setRootViewController(root: .home)
-//        } else {
-//            setRootViewController(root: .login)
-//        }
+        if Session.shared.isLogin {
+            setRootViewController(root: .home)
+        } else {
+            setRootViewController(root: .login)
+        }
         window?.makeKeyAndVisible()
         configNetwork()
         return true

@@ -91,6 +91,14 @@ final class Session {
             userDefault.set(newValue, forKey: App.UserDefault.userAvatar)
         }
     }
+
+    var phone: String {
+        get {
+            return userDefault.string(forKey: App.UserDefault.phone) ?? ""
+        } set {
+            userDefault.set(newValue, forKey: App.UserDefault.phone)
+        }
+    }
     // ---------------------------
 
     var currentLocationCoordinateLat: Double {

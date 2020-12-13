@@ -2,7 +2,7 @@
 //  CommentHeaderCollectionView.swift
 //  MyApp
 //
-//  Created by TanHuynh on 11/30/19.
+//  Created by Thien Luong Q on 11/30/19.
 //  Copyright © 2019 Asian Tech Co., Ltd. All rights reserved.
 //
 

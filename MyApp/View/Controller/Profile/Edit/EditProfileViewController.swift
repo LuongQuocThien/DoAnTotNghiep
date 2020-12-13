@@ -111,7 +111,9 @@ final class EditProfileViewController: ViewController, UINavigationControllerDel
     }
 
     func getProfile() {
+        HUD.show()
         viewModel.getProfile { [weak self] (result) in
+            HUD.dismiss()
             guard let this = self else { return }
             switch result {
             case .success:
@@ -271,14 +273,19 @@ final class EditProfileViewController: ViewController, UINavigationControllerDel
             let address = addressTextField.text,
             let phone = phoneNumberTextField.text,
             let info = bioTextField.text else { return }
-
-        var data = ["firstName": firstName,
+        var data = ["id": Session.shared.userId,
+                    "email": Session.shared.email,
+                    "password": Session.shared.password,
+                    "firstName": firstName,
                     "lastName": lastName,
                     "gender": genderPicker.selectedRow(inComponent: 0),
                     "address": address,
+                    "city": "",
                     "dateOfBirth": dateOfBirth,
                     "phone": phone,
-                    "info": info] as [String : Any]
+                    "avatar": "",
+                    "status": 1] as [String : Any]
+
         if isUpdateAvatar {
             data["avatar"] = avatarURL
         }

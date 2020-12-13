@@ -2,7 +2,7 @@
 //  NewLoginViewController.swift
 //  MyApp
 //
-//  Created by TanHuynh on 11/7/19.
+//  Created by Thien Luong Q on 11/7/19.
 //  Copyright © 2019 Asian Tech Co., Ltd. All rights reserved.
 //
 
@@ -70,10 +70,12 @@ class NewLoginViewController: ViewController {
                     Session.shared.address = "\(user.address), \(user.city)"
                     Session.shared.avatarUrlSring = user.avatarUrlString
                     Session.shared.email = user.email
+                    Session.shared.password = password
 
-                    this.delegate?.controller(this, needPerform: .loginSuccess)
-                    this.navigationController?.popViewController(animated: false)
-//                    AppDelegate.shared.setRootViewController(root: .home)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        this.delegate?.controller(this, needPerform: .loginSuccess)
+                        AppDelegate.shared.setRootViewController(root: .home)
+                    }
                 } else {
                     this.heightErrorMessageConstraint.constant = 100
                     this.passwordTextFied.text = ""
@@ -105,8 +107,11 @@ class NewLoginViewController: ViewController {
 
     @IBAction func backButtonTouchUpInside(_ sender: Any) {
         if let viewControllers = navigationController?.viewControllers,
+            viewControllers.count == 1 && viewControllers[0].isKind(of: NewLoginViewController.self) {
+            AppDelegate.shared.setRootViewController(root: .home)
+        } else if let viewControllers = navigationController?.viewControllers,
             viewControllers.count >= 2,
-            viewControllers[viewControllers.count - 2].isKind(of: ProfileViewController.self) {
+            viewControllers[viewControllers.count - 2].isKind(of: ProfileViewController.self) || viewControllers[viewControllers.count - 2].isKind(of: NotificationViewController.self) {
                 AppDelegate.shared.setRootViewController(root: .home)
         } else {
             navigationController?.popViewController(animated: false)

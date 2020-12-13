@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		644F4062257BCD0600AAE5B5 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F4061257BCD0600AAE5B5 /* ImageManager.swift */; };
 		645186E7257933CC00A49540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 645186E6257933CC00A49540 /* GoogleService-Info.plist */; };
+		64CE5FD22582473E00E0ABBA /* AddressPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64CE5FCE2582473E00E0ABBA /* AddressPaymentViewController.xib */; };
+		64CE5FD32582473E00E0ABBA /* UserInforPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE5FCF2582473E00E0ABBA /* UserInforPaymentViewController.swift */; };
+		64CE5FD42582473E00E0ABBA /* UserInforPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64CE5FD02582473E00E0ABBA /* UserInforPaymentViewController.xib */; };
+		64CE5FD52582473E00E0ABBA /* AddressPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE5FD12582473E00E0ABBA /* AddressPaymentViewController.swift */; };
+		64CE5FD7258247A400E0ABBA /* NewAddressOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE5FD6258247A400E0ABBA /* NewAddressOrder.swift */; };
+		64CE5FDA2582482700E0ABBA /* AddressPaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE5FD82582482700E0ABBA /* AddressPaymentTableViewCell.swift */; };
+		64CE5FDB2582482700E0ABBA /* AddressPaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64CE5FD92582482700E0ABBA /* AddressPaymentTableViewCell.xib */; };
 		64F377B5254E64A5006B8F27 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F377B4254E64A5006B8F27 /* Key.swift */; };
 		64F37870254E6872006B8F27 /* CommentHeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377B8254E686F006B8F27 /* CommentHeaderCollectionView.xib */; };
 		64F37871254E6872006B8F27 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F377B9254E686F006B8F27 /* CommentViewController.xib */; };
@@ -245,6 +252,13 @@
 		48F8D478234569385F88AC15 /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		644F4061257BCD0600AAE5B5 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		645186E6257933CC00A49540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64CE5FCE2582473E00E0ABBA /* AddressPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPaymentViewController.xib; sourceTree = "<group>"; };
+		64CE5FCF2582473E00E0ABBA /* UserInforPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInforPaymentViewController.swift; sourceTree = "<group>"; };
+		64CE5FD02582473E00E0ABBA /* UserInforPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInforPaymentViewController.xib; sourceTree = "<group>"; };
+		64CE5FD12582473E00E0ABBA /* AddressPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPaymentViewController.swift; sourceTree = "<group>"; };
+		64CE5FD6258247A400E0ABBA /* NewAddressOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAddressOrder.swift; sourceTree = "<group>"; };
+		64CE5FD82582482700E0ABBA /* AddressPaymentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPaymentTableViewCell.swift; sourceTree = "<group>"; };
+		64CE5FD92582482700E0ABBA /* AddressPaymentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPaymentTableViewCell.xib; sourceTree = "<group>"; };
 		64F377B4254E64A5006B8F27 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		64F377B8254E686F006B8F27 /* CommentHeaderCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentHeaderCollectionView.xib; sourceTree = "<group>"; };
 		64F377B9254E686F006B8F27 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
@@ -450,8 +464,8 @@
 		ECC3B1C41EC17044001345C6 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		ECC3B1C81EC1A2EA001345C6 /* NSURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLTests.swift; sourceTree = "<group>"; };
 		ECC3B1CA1EC1B196001345C6 /* DictionayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionayTests.swift; sourceTree = "<group>"; };
-		ECCCCB181E7A40D00073D923 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECCCCB2C1E7A40D10073D923 /* MyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCCCB181E7A40D00073D923 /* FoodNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCCCB2C1E7A40D10073D923 /* FoodNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEC0C571ED44C5D00F6760A /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F1C6352B1EF141F300D0A1A0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F49F1AB05FCB88523C52A0ED /* Pods_MyApp_MyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp_MyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -765,6 +779,10 @@
 		64F37818254E6871006B8F27 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				64CE5FD12582473E00E0ABBA /* AddressPaymentViewController.swift */,
+				64CE5FCE2582473E00E0ABBA /* AddressPaymentViewController.xib */,
+				64CE5FCF2582473E00E0ABBA /* UserInforPaymentViewController.swift */,
+				64CE5FD02582473E00E0ABBA /* UserInforPaymentViewController.xib */,
 				64F37819254E6871006B8F27 /* OrderFoodViewController.swift */,
 				64F3781A254E6871006B8F27 /* PaymentViewController.xib */,
 				64F3781B254E6871006B8F27 /* Cell */,
@@ -777,6 +795,8 @@
 		64F3781B254E6871006B8F27 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				64CE5FD82582482700E0ABBA /* AddressPaymentTableViewCell.swift */,
+				64CE5FD92582482700E0ABBA /* AddressPaymentTableViewCell.xib */,
 				64F3781C254E6871006B8F27 /* OrderFoodTableViewCell.swift */,
 				64F3781D254E6871006B8F27 /* OrderFoodTableViewCell.xib */,
 			);
@@ -1087,6 +1107,7 @@
 		64F3797B254E7F4A006B8F27 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				64CE5FD6258247A400E0ABBA /* NewAddressOrder.swift */,
 				64F3797C254E7F4A006B8F27 /* NewLocation.swift */,
 				64F3797D254E7F4A006B8F27 /* NewOrder.swift */,
 				64F3797E254E7F4A006B8F27 /* NewGeo.swift */,
@@ -1246,8 +1267,8 @@
 		ECCCCB191E7A40D00073D923 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECCCCB181E7A40D00073D923 /* MyApp.app */,
-				ECCCCB2C1E7A40D10073D923 /* MyAppTests.xctest */,
+				ECCCCB181E7A40D00073D923 /* FoodNow.app */,
+				ECCCCB2C1E7A40D10073D923 /* FoodNowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1284,9 +1305,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ECCCCB171E7A40D00073D923 /* MyApp */ = {
+		ECCCCB171E7A40D00073D923 /* FoodNow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECCCCB351E7A40D10073D923 /* Build configuration list for PBXNativeTarget "MyApp" */;
+			buildConfigurationList = ECCCCB351E7A40D10073D923 /* Build configuration list for PBXNativeTarget "FoodNow" */;
 			buildPhases = (
 				B0E09827A261C794A6F031AA /* [CP] Check Pods Manifest.lock */,
 				EC8C6FF51ECAF27D00C52F7A /* SwiftLint */,
@@ -1301,14 +1322,14 @@
 			);
 			dependencies = (
 			);
-			name = MyApp;
+			name = FoodNow;
 			productName = MVVM;
-			productReference = ECCCCB181E7A40D00073D923 /* MyApp.app */;
+			productReference = ECCCCB181E7A40D00073D923 /* FoodNow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ECCCCB2B1E7A40D10073D923 /* MyAppTests */ = {
+		ECCCCB2B1E7A40D10073D923 /* FoodNowTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECCCCB381E7A40D10073D923 /* Build configuration list for PBXNativeTarget "MyAppTests" */;
+			buildConfigurationList = ECCCCB381E7A40D10073D923 /* Build configuration list for PBXNativeTarget "FoodNowTests" */;
 			buildPhases = (
 				ECCCCB281E7A40D10073D923 /* Sources */,
 				ECCCCB291E7A40D10073D923 /* Frameworks */,
@@ -1319,9 +1340,9 @@
 			dependencies = (
 				ECCCCB2E1E7A40D10073D923 /* PBXTargetDependency */,
 			);
-			name = MyAppTests;
+			name = FoodNowTests;
 			productName = MVVMTests;
-			productReference = ECCCCB2C1E7A40D10073D923 /* MyAppTests.xctest */;
+			productReference = ECCCCB2C1E7A40D10073D923 /* FoodNowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1345,7 +1366,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ECCCCB131E7A40D00073D923 /* Build configuration list for PBXProject "MyApp" */;
+			buildConfigurationList = ECCCCB131E7A40D00073D923 /* Build configuration list for PBXProject "FoodNow" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1359,8 +1380,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ECCCCB171E7A40D00073D923 /* MyApp */,
-				ECCCCB2B1E7A40D10073D923 /* MyAppTests */,
+				ECCCCB171E7A40D00073D923 /* FoodNow */,
+				ECCCCB2B1E7A40D10073D923 /* FoodNowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1399,14 +1420,17 @@
 				64F378B1254E6872006B8F27 /* FilterViewController.xib in Resources */,
 				64F378F6254E6873006B8F27 /* EditProfileViewController.xib in Resources */,
 				64F37870254E6872006B8F27 /* CommentHeaderCollectionView.xib in Resources */,
+				64CE5FD42582473E00E0ABBA /* UserInforPaymentViewController.xib in Resources */,
 				64F378F1254E6873006B8F27 /* ProfileViewController.xib in Resources */,
 				64F37884254E6872006B8F27 /* NewRegisterViewController.xib in Resources */,
 				645186E7257933CC00A49540 /* GoogleService-Info.plist in Resources */,
+				64CE5FD22582473E00E0ABBA /* AddressPaymentViewController.xib in Resources */,
 				64F378EB254E6873006B8F27 /* MenuViewController.xib in Resources */,
 				64F378B5254E6872006B8F27 /* FavoriteTableViewCell.xib in Resources */,
 				64F37887254E6872006B8F27 /* NewLoginViewController.xib in Resources */,
 				64F378D5254E6873006B8F27 /* SearchNearlyViewController.xib in Resources */,
 				64F37883254E6872006B8F27 /* LocationViewController.xib in Resources */,
+				64CE5FDB2582482700E0ABBA /* AddressPaymentTableViewCell.xib in Resources */,
 				64F378BE254E6872006B8F27 /* OrderFoodViewController.xib in Resources */,
 				64F378E1254E6873006B8F27 /* PhotoViewController.xib in Resources */,
 				64F378D3254E6873006B8F27 /* SearchResultViewController.xib in Resources */,
@@ -1540,6 +1564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64F379A1254E7F4A006B8F27 /* Restaurant.swift in Sources */,
+				64CE5FD7258247A400E0ABBA /* NewAddressOrder.swift in Sources */,
 				64F3788D254E6872006B8F27 /* LoginViewController.swift in Sources */,
 				64F378E9254E6873006B8F27 /* ListFoodViewModel.swift in Sources */,
 				64F378EC254E6873006B8F27 /* MenuViewController.swift in Sources */,
@@ -1586,10 +1611,12 @@
 				64F37997254E7F4A006B8F27 /* NewOrdersInfo.swift in Sources */,
 				64F379A0254E7F4A006B8F27 /* DiscoveryRestaurant.swift in Sources */,
 				64F37894254E6872006B8F27 /* AddressTableViewCell.swift in Sources */,
+				64CE5FD32582473E00E0ABBA /* UserInforPaymentViewController.swift in Sources */,
 				64F378B0254E6872006B8F27 /* FilterViewModel.swift in Sources */,
 				64F378C0254E6872006B8F27 /* SearchingViewController.swift in Sources */,
 				64F3793E254E7468006B8F27 /* API.Profile.swift in Sources */,
 				64F378D1254E6873006B8F27 /* SearchTableViewCell.swift in Sources */,
+				64CE5FD52582473E00E0ABBA /* AddressPaymentViewController.swift in Sources */,
 				64F37990254E7F4A006B8F27 /* UserProfile.swift in Sources */,
 				64F378F7254E6873006B8F27 /* EditProfileViewModel.swift in Sources */,
 				64F378DB254E6873006B8F27 /* ListAlbumViewModel.swift in Sources */,
@@ -1597,6 +1624,7 @@
 				64F378F3254E6873006B8F27 /* ProfileTableCell.swift in Sources */,
 				64F378CB254E6872006B8F27 /* FoosterTableView.swift in Sources */,
 				64F378A4254E6872006B8F27 /* HomeViewController.swift in Sources */,
+				64CE5FDA2582482700E0ABBA /* AddressPaymentTableViewCell.swift in Sources */,
 				64F378EF254E6873006B8F27 /* PasswordViewController.swift in Sources */,
 				64F37904254E6900006B8F27 /* CollectionCell.swift in Sources */,
 				64F37903254E6900006B8F27 /* TableCell.swift in Sources */,
@@ -1704,7 +1732,7 @@
 /* Begin PBXTargetDependency section */
 		ECCCCB2E1E7A40D10073D923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ECCCCB171E7A40D00073D923 /* MyApp */;
+			target = ECCCCB171E7A40D00073D923 /* FoodNow */;
 			targetProxy = ECCCCB2D1E7A40D10073D923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1835,7 +1863,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FoodNow;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1850,7 +1878,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FoodNow;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1865,7 +1893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyApp.app/MyApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNow.app/FoodNow";
 			};
 			name = Debug;
 		};
@@ -1879,7 +1907,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyApp.app/MyApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNow.app/FoodNow";
 			};
 			name = Release;
 		};
@@ -1943,7 +1971,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.doantotnghiep;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FoodNow;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Staging;
@@ -1958,14 +1986,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.mvvm.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyApp.app/MyApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNow.app/FoodNow";
 			};
 			name = Staging;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ECCCCB131E7A40D00073D923 /* Build configuration list for PBXProject "MyApp" */ = {
+		ECCCCB131E7A40D00073D923 /* Build configuration list for PBXProject "FoodNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECCCCB331E7A40D10073D923 /* Debug */,
@@ -1975,7 +2003,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECCCCB351E7A40D10073D923 /* Build configuration list for PBXNativeTarget "MyApp" */ = {
+		ECCCCB351E7A40D10073D923 /* Build configuration list for PBXNativeTarget "FoodNow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECCCCB361E7A40D10073D923 /* Debug */,
@@ -1985,7 +2013,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECCCCB381E7A40D10073D923 /* Build configuration list for PBXNativeTarget "MyAppTests" */ = {
+		ECCCCB381E7A40D10073D923 /* Build configuration list for PBXNativeTarget "FoodNowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECCCCB391E7A40D10073D923 /* Debug */,
